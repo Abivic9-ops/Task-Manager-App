@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager App</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+    <main class="container">
+        <section class="task-manager">
+            <div class="task-content">
+                <h1>Task Manager App</h1>
+                <form id="taskForm" class="task-form">
+                    <input type="text" id="taskInput" class="input-field" placeholder="Enter a certain task" required>
+                    <button type="submit" class="submit-btn"><i class='bx bx-plus-circle'></i>Add Task</button>
+                </form>
+            </div>
+            <section id="taskContainer"></section>
+        </section>
+
+        <section class="confirmation-container">
+
+            <div class="confirm-content">
+                <h2>Confirm your action</h2>
+                <p>Do you <strong>really</strong> want to delete this task permanently?</p>
+
+                <div class="action-btns">
+                    <button class="cancel-btn">Cancel</button>
+                    <button autofocus class="confirmed-btn">Confirm</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="app-footer" class="footer-section">
+        <p>&copy; 2026 Task Manger App &middot; Built for Task Management</p>
+        <div class="social-media">
+            <a href="#"><i class='bx bxl-github'></i></a>
+            <a href="#"><i class='bx bxl-linkedin'></i></a>
+            <!-- <p>&copy; 2026 Abivic9-Ops. All rights reserved.</p> -->
+
+        </div>
+    </footer>
+   
+
+    <script src="script.js"></script>
+</body>
+
+</html>

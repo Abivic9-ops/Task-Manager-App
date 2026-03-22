@@ -20,10 +20,19 @@
                     <input type="text" id="taskInput" class="input-field" placeholder="Enter a certain task" required>
                     <button type="submit" class="submit-btn"><i class='bx bx-plus-circle'></i> Add Task</button>
                 </form>
+
             </div>
             <section id="taskContainer"></section>
         </section>
 
+           <!-- A part that shows all the tasks pending to be completed -->
+        <section class="task-report">
+                <div class="task-summary">
+                    <p>Pending: <span id="pendingCount">0</span></p>
+                    <p>Completed: <span id="completedCount">0</span></p>
+                </div>
+                
+        </section>
         <section class="confirmation-container">
 
             <div class="confirm-content">
@@ -32,7 +41,7 @@
 
                 <div class="action-btns">
                     <button class="cancel-btn">Cancel</button>
-                    <button autofocus class="confirmed-btn">Confirm</button>
+                    <button autofocus class="confirm-btn">Confirm</button>
                 </div>
             </div>
         </section>
@@ -49,7 +58,7 @@
 
         </div>
     </footer>
-   
+
 
     <script src="script.js"></script>
 </body>

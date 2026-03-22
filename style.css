@@ -45,32 +45,44 @@ body {
 
 .task-content {
     font-size: 18px;
+    width:500px;
+    display: block;
 }
 
 .task-content h1 {
     font-size: 32px;
 }
 
-.task-form {
+#taskForm {
+    display: block;
     margin-top: 10px;
     gap: 15px;
+    /* display: flex; */
+        text-align: center;
+     justify-content: center;
+    align-items: center;
 }
 
 
 .input-field {
-    padding: 15px 6px;
-    border-radius: 20px;
-    width: 50%;
+    padding: 15px ;
+    transform: translateY(8px);
+    border-radius: 25px;
+    width: 60%;
     border: none;
     display: inline-flex;
     text-align: center;
     justify-content: center;
     align-items: center;
 }  
+
 .input-field :hover{
     border: none;
 }
+
+
 .submit-btn {
+        transform: translateY(8px);
     width: 20%;
     padding: 15px 6px;
     border-radius: 20px;
@@ -85,17 +97,6 @@ body {
     color: #fff;
 }
 
-.confirmation-container{
-  display: flex;
-  margin-top: 20px;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-}
-
-.confirm-content h2{
-padding: 15px;
-}
 .action-btns{
     margin-top: 15px;
     padding: 15px;
@@ -159,7 +160,7 @@ padding: 15px;
 }
 
 .cancel-btn,
-.confirmed-btn{
+.confirm-btn{
     padding: 12px;
     width: 30%;
     border-radius: 20px;
@@ -174,7 +175,7 @@ padding: 15px;
 
 }
 
-.confirmed-btn:hover{
+.confirm-btn:hover{
      background-color: #37a1f2;
     color: #fff;
     scale: 1.1;
@@ -220,7 +221,6 @@ justify-self:center;
     animation-name: spin;
     animation-duration: 2s;
     animation-iteration-count: infinite;
-    /* animation-delay: 1s; */
     box-shadow: 0 0 0.3rem #37a1f2;
 }
 
@@ -243,3 +243,152 @@ justify-self:center;
     }
 }
 
+/* Task-Button Styling */
+
+.button-box {
+    background: #FCFCFC;
+    border-radius: 20px;
+    outline: 0;
+    border: none;
+    box-shadow: 2px 2px 10px rgba(119, 119, 119, 0.5);
+    transition: all 0.5s ease-in-out;
+    margin-top: 1rem;
+    padding: 12px 10px;
+}
+
+.button-box:hover {
+    background: #efefef;
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;;
+}
+
+.green {
+    color: #4ec07d;
+}
+
+.red {
+    color: #e96075;
+}
+
+.button-box span {
+    font-size: 0.9em;
+    font-weight: 100;
+    letter-spacing: 3px;
+    padding-top: 5px;
+    /* color: #FCFCFC; */
+    padding-bottom: 5px;
+    text-transform: uppercase;
+}
+
+/* The Styling that will appear once the confirmation-container pops up */
+
+.overlay {
+    position: relative;
+}
+
+.overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity:0.9;
+    background: #58377e;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+.confirmation-container{
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.confirm-content {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    min-width: 280px;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid white;
+    animation: fade 0.5s ease 1 forwards;
+}
+
+.confirm-content h2 {
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 1.5rem 1rem 0.5rem;
+}
+
+.confirm-content p {
+    text-align: center;
+    font-size: 1rem;
+    margin: 0 2rem 4.5rem;
+}
+
+/* the task report section */
+.task-report{
+    background: transparent;
+    padding: 40px;
+  animation: popup 5.3s ease-in-out infinite;
+}
+
+@keyframes popup {
+    0% {
+        opacity: 0.6;
+        transform: translateY(-10px);
+    }
+
+    25% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    50% {
+        opacity: 0.6;
+        transform: translateY(-10px);
+    }
+
+    75% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0.6;
+        transform: translateY(-10px);
+    }
+
+}
+
+.task-summary{
+    transform: translateY(-300px);
+    transform: translateX(300px);
+       border: 2px solid transparent; 
+     box-shadow: 0 0 0 3px #5f3b83; 
+     background:#5f3b83 ;
+         padding: 40px;
+         border-radius: 30px;
+
+}
